@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CX — Backend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Grid Overlay -->
+  <div class="grid-overlay"></div>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-bracket">[</span>CX<span class="logo-bracket">]</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#stack" class="nav-link">Stack</a></li>
+        <li><a href="#systems" class="nav-link">Systems</a></li>
+        <li><a href="#collab" class="nav-link">Collab</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Hire Me
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#stack" class="mobile-link">Stack</a>
+      <a href="#systems" class="mobile-link">Systems</a>
+      <a href="#collab" class="mobile-link">Collab</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-glow hero-glow--2"></div>
+
+    <div class="hero-inner">
+      <div class="terminal-badge reveal-fade">
+        <span class="terminal-prompt">&gt;</span>
+        <span class="terminal-text" id="terminalText"></span>
+        <span class="terminal-cursor">_</span>
+      </div>
+
+      <h1 class="hero-title reveal-up">
+        <span class="hero-title-line">Backend</span>
+        <span class="hero-title-line hero-title-line--italic">Developer</span>
+      </h1>
+
+      <p class="hero-subtitle reveal-fade delay-2">
+        Building scalable APIs, backend systems<br class="br-desktop" /> and modern server architecture.
+      </p>
+
+      <div class="hero-meta reveal-fade delay-3">
+        <span class="hero-meta-item"><span class="dot"></span> Available for projects</span>
+        <span class="hero-meta-sep">/</span>
+        <span class="hero-meta-item"><span class="dot dot--blink"></span> Node.js &amp; APIs</span>
+      </div>
+
+      <div class="hero-actions reveal-fade delay-4">
+        <a href="#contact" class="btn btn--primary">Contact</a>
+        <a href="#systems" class="btn btn--ghost">Projects</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span class="scroll-label">scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+    <div class="hero-counter">
+      <div class="counter-item">
+        <span class="counter-num">07+</span>
+        <span class="counter-label">Technologies</span>
+      </div>
+      <div class="counter-divider"></div>
+      <div class="counter-item">
+        <span class="counter-num">∞</span>
+        <span class="counter-label">Systems Built</span>
+      </div>
+      <div class="counter-divider"></div>
+      <div class="counter-item">
+        <span class="counter-num">24/7</span>
+        <span class="counter-label">Learning</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label reveal-fade">
+        <span class="label-line"></span>
+        <span class="label-text">01 / About</span>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-left reveal-up">
+          <h2 class="section-title">
+            Architecting<br /><em>logic at scale</em>
+          </h2>
+          <div class="about-code-block">
+            <div class="code-header">
+              <span class="code-dot"></span>
+              <span class="code-dot"></span>
+              <span class="code-dot"></span>
+              <span class="code-filename">cx.profile.js</span>
+            </div>
+            <pre class="code-body"><code><span class="c-kw">const</span> <span class="c-var">developer</span> = {
+  <span class="c-key">name</span>: <span class="c-str">"CX"</span>,
+  <span class="c-key">role</span>: <span class="c-str">"Junior Backend Dev"</span>,
+  <span class="c-key">focus</span>: [
+    <span class="c-str">"API Engineering"</span>,
+    <span class="c-str">"Database Design"</span>,
+    <span class="c-str">"Auth Systems"</span>,
+    <span class="c-str">"Server Logic"</span>
+  ],
+  <span class="c-key">stack</span>: <span class="c-str">"Node.js + MongoDB"</span>,
+  <span class="c-key">status</span>: <span class="c-str">"Building &amp; Learning"</span>
+};</code></pre>
+          </div>
+        </div>
+
+        <div class="about-right reveal-up delay-2">
+          <p class="about-desc">
+            I'm <strong>CX</strong>, a junior backend developer focused on building
+            the infrastructure that powers modern applications. My work lives in the
+            invisible layers — the APIs, the databases, the authentication flows,
+            the server logic that makes everything run.
+          </p>
+          <p class="about-desc">
+            Currently deep in the Node.js ecosystem, I'm learning how to design
+            <strong>scalable systems</strong>, structure efficient databases, and
+            engineer authentication pipelines that are both secure and clean.
+            This is a full-stack journey, but backend architecture is where my
+            mind lives.
+          </p>
+
+          <div class="about-tags">
+            <span class="tag">APIs</span>
+            <span class="tag">Databases</span>
+            <span class="tag">Auth Logic</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Backend Systems</span>
+            <span class="tag">Full Stack</span>
+          </div>
+
+          <div class="about-stat-row">
+            <div class="about-stat">
+              <span class="stat-label">// primary runtime</span>
+              <span class="stat-value">Node.js</span>
+            </div>
+            <div class="about-stat">
+              <span class="stat-label">// primary db</span>
+              <span class="stat-value">MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ TECH STACK ═══════════════════════════════ -->
+  <section class="stack section" id="stack">
+    <div class="container">
+      <div class="section-label reveal-fade">
+        <span class="label-line"></span>
+        <span class="label-text">02 / Tech Stack</span>
+      </div>
+
+      <h2 class="section-title reveal-up">
+        Engineering<br /><em>Toolkit</em>
+      </h2>
+
+      <div class="stack-grid">
+
+        <div class="stack-card reveal-up" data-delay="0">
+          <div class="card-header">
+            <span class="card-icon">{ }</span>
+            <span class="card-badge">Core</span>
+          </div>
+          <h3 class="card-title">JavaScript</h3>
+          <p class="card-desc">Primary language for backend logic, async operations, and API engineering.</p>
+          <div class="card-bar-wrap">
+            <div class="card-bar-label">
+              <span>Proficiency</span><span class="bar-val">72%</span>
+            </div>
+            <div class="card-bar-track">
+              <div class="card-bar-fill" data-width="72"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack-card reveal-up" data-delay="1">
+          <div class="card-header">
+            <span class="card-icon">⬡</span>
+            <span class="card-badge">Runtime</span>
+          </div>
+          <h3 class="card-title">Node.js</h3>
+          <p class="card-desc">Server-side runtime powering async, event-driven backend architecture.</p>
+          <div class="card-bar-wrap">
+            <div class="card-bar-label">
+              <span>Proficiency</span><span class="bar-val">65%</span>
+            </div>
+            <div class="card-bar-track">
+              <div class="card-bar-fill" data-width="65"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack-card reveal-up" data-delay="2">
+          <div class="card-header">
+            <span class="card-icon">◈</span>
+            <span class="card-badge">Framework</span>
+          </div>
+          <h3 class="card-title">Express</h3>
+          <p class="card-desc">Minimal web framework for structuring REST APIs and server routing logic.</p>
+          <div class="card-bar-wrap">
+            <div class="card-bar-label">
+              <span>Proficiency</span><span class="bar-val">60%</span>
+            </div>
+            <div class="card-bar-track">
+              <div class="card-bar-fill" data-width="60"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack-card reveal-up" data-delay="3">
+          <div class="card-header">
+            <span class="card-icon">◉</span>
+            <span class="card-badge">Database</span>
+          </div>
+          <h3 class="card-title">MongoDB</h3>
+          <p class="card-desc">NoSQL document database for flexible schema design and scalable data storage.</p>
+          <div class="card-bar-wrap">
+            <div class="card-bar-label">
+              <span>Proficiency</span><span class="bar-val">58%</span>
+            </div>
+            <div class="card-bar-track">
+              <div class="card-bar-fill" data-width="58"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack-card reveal-up" data-delay="4">
+          <div class="card-header">
+            <span class="card-icon">⊞</span>
+            <span class="card-badge">Database</span>
+          </div>
+          <h3 class="card-title">SQL</h3>
+          <p class="card-desc">Structured query language for relational database operations and schema design.</p>
+          <div class="card-bar-wrap">
+            <div class="card-bar-label">
+              <span>Proficiency</span><span class="bar-val">50%</span>
+            </div>
+            <div class="card-bar-track">
+              <div class="card-bar-fill" data-width="50"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack-card reveal-up" data-delay="5">
+          <div class="card-header">
+            <span class="card-icon">⇄</span>
+            <span class="card-badge">Protocol</span>
+          </div>
+          <h3 class="card-title">REST APIs</h3>
+          <p class="card-desc">Designing stateless HTTP APIs with clean routing, responses and error handling.</p>
+          <div class="card-bar-wrap">
+            <div class="card-bar-label">
+              <span>Proficiency</span><span class="bar-val">68%</span>
+            </div>
+            <div class="card-bar-track">
+              <div class="card-bar-fill" data-width="68"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack-card reveal-up" data-delay="6">
+          <div class="card-header">
+            <span class="card-icon">⊛</span>
+            <span class="card-badge">Security</span>
+          </div>
+          <h3 class="card-title">Authentication</h3>
+          <p class="card-desc">JWT, sessions, OAuth flows and secure access control implementation.</p>
+          <div class="card-bar-wrap">
+            <div class="card-bar-label">
+              <span>Proficiency</span><span class="bar-val">55%</span>
+            </div>
+            <div class="card-bar-track">
+              <div class="card-bar-fill" data-width="55"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ SYSTEMS ═══════════════════════════════ -->
+  <section class="systems section" id="systems">
+    <div class="container">
+      <div class="section-label reveal-fade">
+        <span class="label-line"></span>
+        <span class="label-text">03 / Backend Systems</span>
+      </div>
+
+      <h2 class="section-title reveal-up">
+        Architecture<br /><em>Panels</em>
+      </h2>
+
+      <div class="systems-grid">
+
+        <div class="sys-panel reveal-up sys-panel--wide" data-delay="0">
+          <div class="sys-panel-top">
+            <span class="sys-id">SYS-01</span>
+            <span class="sys-status active">● Active</span>
+          </div>
+          <h3 class="sys-title">REST API Engineering</h3>
+          <p class="sys-desc">Designing and implementing RESTful HTTP services with structured routing, middleware pipelines, standardized response schemas, and proper status code semantics.</p>
+          <div class="sys-tags">
+            <span>GET /api/v1</span>
+            <span>POST /auth</span>
+            <span>Middleware</span>
+            <span>JSON Schema</span>
+          </div>
+          <div class="sys-bar">
+            <div class="sys-bar-fill" style="width:78%"></div>
+          </div>
+        </div>
+
+        <div class="sys-panel reveal-up" data-delay="1">
+          <div class="sys-panel-top">
+            <span class="sys-id">SYS-02</span>
+            <span class="sys-status active">● Active</span>
+          </div>
+          <h3 class="sys-title">Database Design</h3>
+          <p class="sys-desc">Schema architecture, indexing strategies, and data normalization for both relational and document-based storage systems.</p>
+          <div class="sys-tags">
+            <span>Schema</span>
+            <span>Indexing</span>
+            <span>Queries</span>
+          </div>
+          <div class="sys-bar">
+            <div class="sys-bar-fill" style="width:62%"></div>
+          </div>
+        </div>
+
+        <div class="sys-panel reveal-up" data-delay="2">
+          <div class="sys-panel-top">
+            <span class="sys-id">SYS-03</span>
+            <span class="sys-status building">◌ Building</span>
+          </div>
+          <h3 class="sys-title">Auth Flow</h3>
+          <p class="sys-desc">JWT token pipelines, session management, role-based access control and secure password hashing.</p>
+          <div class="sys-tags">
+            <span>JWT</span>
+            <span>bcrypt</span>
+            <span>RBAC</span>
+          </div>
+          <div class="sys-bar">
+            <div class="sys-bar-fill" style="width:55%"></div>
+          </div>
+        </div>
+
+        <div class="sys-panel reveal-up" data-delay="3">
+          <div class="sys-panel-top">
+            <span class="sys-id">SYS-04</span>
+            <span class="sys-status active">● Active</span>
+          </div>
+          <h3 class="sys-title">Server Logic</h3>
+          <p class="sys-desc">Business logic encapsulation, service layers, error handling architecture and clean code structuring.</p>
+          <div class="sys-tags">
+            <span>Services</span>
+            <span>Controllers</span>
+            <span>Errors</span>
+          </div>
+          <div class="sys-bar">
+            <div class="sys-bar-fill" style="width:70%"></div>
+          </div>
+        </div>
+
+        <div class="sys-panel reveal-up sys-panel--wide" data-delay="4">
+          <div class="sys-panel-top">
+            <span class="sys-id">SYS-05</span>
+            <span class="sys-status building">◌ Building</span>
+          </div>
+          <h3 class="sys-title">Async Operations &amp; Infrastructure</h3>
+          <p class="sys-desc">Event-driven architecture, Promise chains, async/await patterns, non-blocking I/O, and foundational knowledge of deployment infrastructure and server environments.</p>
+          <div class="sys-tags">
+            <span>async/await</span>
+            <span>Promises</span>
+            <span>Event Loop</span>
+            <span>Deployment</span>
+          </div>
+          <div class="sys-bar">
+            <div class="sys-bar-fill" style="width:50%"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ COLLAB ═══════════════════════════════ -->
+  <section class="collab section" id="collab">
+    <div class="collab-glow"></div>
+    <div class="container">
+      <div class="section-label reveal-fade">
+        <span class="label-line"></span>
+        <span class="label-text">04 / Collaboration</span>
+      </div>
+
+      <div class="collab-inner">
+        <div class="collab-x-mark reveal-fade">×</div>
+        <h2 class="collab-title reveal-up">
+          CX <span class="collab-amp">×</span> Danonin
+        </h2>
+        <p class="collab-text reveal-fade delay-2">
+          Two junior developers building modern systems together.<br class="br-desktop"/>
+          Combining backend logic, API engineering, and relentless learning<br class="br-desktop"/>
+          to create infrastructure that scales.
+        </p>
+        <div class="collab-divider reveal-fade delay-3"></div>
+        <div class="collab-row reveal-fade delay-3">
+          <div class="collab-dev">
+            <span class="dev-name">CX</span>
+            <span class="dev-role">Backend Architecture</span>
+          </div>
+          <div class="collab-connector">
+            <span class="connector-line"></span>
+            <span class="connector-node"></span>
+            <span class="connector-line"></span>
+          </div>
+          <div class="collab-dev">
+            <span class="dev-name">Danonin</span>
+            <span class="dev-role">Frontend &amp; System</span>
+          </div>
+        </div>
+        <a href="#" class="btn btn--primary collab-btn reveal-fade delay-4" target="_blank" rel="noopener">
+          Visit Danonin Portfolio
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label reveal-fade">
+        <span class="label-line"></span>
+        <span class="label-text">05 / Contact</span>
+      </div>
+
+      <div class="contact-inner">
+        <h2 class="contact-title reveal-up">
+          Let's build<br /><em>scalable systems.</em>
+        </h2>
+        <p class="contact-sub reveal-fade delay-2">
+          Open to backend projects, collaborations, and learning opportunities.
+        </p>
+
+        <div class="contact-actions reveal-fade delay-3">
+          <a href="mailto:cx@example.com" class="contact-btn">
+            <span class="contact-btn-icon">✉</span>
+            <span class="contact-btn-label">Email</span>
+            <span class="contact-btn-sub">cauagoncalvesxisto@gmail.com</span>
+          </a>
+          <a href="https://discord.com" target="_blank" rel="noopener" class="contact-btn">
+            <span class="contact-btn-icon">#</span>
+            <span class="contact-btn-label">Discord</span>
+            <span class="contact-btn-sub">_cx444</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">[CX]</span>
+      <span class="footer-copy">© 2025 CX. All systems operational.</span>
+      <span class="footer-mono">v1.0.0</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
